@@ -1,0 +1,277 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SEEKERT-SEEKER AND EXPERT</title>
+
+<link rel="stylesheet" href="css/reset.css" type="text/css" />
+<link rel="stylesheet" href="css/styles.css" type="text/css" />
+<link rel="stylesheet" href="css/form.css" type="text/css" />
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
+<script type="text/javascript" src="js/superfish.js"></script>
+
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" >
+function ajaxFunction(){
+	var ajaxRequest;  // The variable that makes Ajax possible!
+
+	try{
+		// Opera 8.0+, Firefox, Safari
+		ajaxRequest = new XMLHttpRequest();
+	} catch (e){
+		// Internet Explorer Browsers
+		try{
+			ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+		} catch (e) {
+			try{
+				ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+			} catch (e){
+				// Something went wrong
+				alert("Your browser broke!");
+				return false;
+			}
+		}
+	}
+	// Create a function that will receive data sent from the server
+	ajaxRequest.onreadystatechange = function(){
+		if(ajaxRequest.readyState == 4){
+			var ajaxDisplay = document.getElementById('div3');
+				var ajaxDisplay1 = document.getElementById('log1');
+
+			var name=ajaxRequest.responseText;
+			var n="Welcome to SEEKERT";
+			if (name != n)
+					{
+					
+	alert(name);
+						window.location.href = "index.jsp";
+					}
+					
+
+							ajaxDisplay1.innerHTML = name;
+		}
+	}
+	var age = document.getElementById('age').value;
+	var wpm = document.getElementById('wpm').value;
+
+	var queryString = "?age=" + age + "&wpm=" + wpm ;
+	ajaxRequest.open("GET", "log.jsp" + queryString, true);
+	ajaxRequest.send(null);
+}
+</script>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+
+<!--
+deiform, a free CSS web template by ZyPOP (zypopwebtemplates.com/)
+
+Download: http://zypopwebtemplates.com/
+
+License: Creative Commons Attribution
+//-->
+</head>
+<body>
+<div id="container" class="width">
+
+    <header> 
+	<div class="width">
+
+    		<h1><a href="/">SEEKERT</a></h1>
+
+		<nav>
+	
+    			<ul class="sf-menu dropdown">
+
+			
+        			<li class="selected"><a href="index.html">Home</a></li>
+
+            			<li>
+
+					<a href="#">SEEKER</a>
+            			
+					<ul>
+                				<li><a href="seeker.html">LOGIN</a></li>
+						<li><a href="sregister.html">SEEKER SIGN UP</a></li>
+                    				
+                			</ul>
+
+            			</li>
+						
+            			<li>
+
+					<a href="#">EXPERT</a>
+            			
+					<ul>
+                				<li><a href="expert.html">LOGIN</a></li>
+						
+                    				<li><a href="ergister.html">EXPERT SIGN UP</a></li>
+                			</ul>
+
+            			</li>
+
+	     			
+            
+				
+            
+				<li><a href="#">Contact</a></li>
+       			</ul>
+
+			
+			<div class="clear"></div>
+    		</nav>
+       	</div>
+
+	<div class="clear"></div>
+
+       
+    </header>
+
+
+    <div id="intro">
+
+	<div class="width">
+      
+		<div class="intro-content">
+	
+                    <h2> IN ERA OF SOCIAL NETWORKING  </h2>
+                    <p>community where we, the common people, could get in touch with the experts in the field  </p>
+                                  	
+			<p><a href="seeker.jsp" class="button button-slider"><i class="fa fa-gbp"></i>SEEKER</a>
+							<a href="expert.jsp" class="button button-reversed button-slider"><i class="fa fa-info"></i> EXPERT</a></p>
+                    
+
+            	</div>
+                
+            </div>
+            
+
+	</div>
+
+    <div id="body" class="width">
+
+
+
+		<section id="content" class="two-column with-right-sidebar">
+
+	    <article>
+				
+			
+			<h2>Introduction to SEEKERT</h2>
+			<div class="article-info">Posted on <time datetime="2013-05-14">14 May</time> by <a href="#" rel="author">Joe Bloggs</a></div>
+
+          <p> The one thing we have seen in common with ideas are that they come with experience. This is one such thought we had. We have been moving around cities for a long time now and every time we move we have inevitable need of household services like packers and movers, plumbers, carpenters, electricians and so on.
+
+The task of finding one in the new place is always difficult and hence we came up with idea of creating a community where we, the common people, could get in touch with the experts in the field and hence 'Seekert' was born.  </p>
+
+
+           
+
+		<a href="#" class="button">Read more</a>
+		<a href="#" class="button button-reversed">Comments</a>
+
+
+		
+		</article>
+	
+		<article class="expanded">
+
+            		<h2>HOW WE WORK--??</h2>
+			<div class="article-info">Posted on <time datetime="2013-05-14">14 May</time> by <a href="#" rel="author">Joe Bloggs</a></div>
+
+			
+            <p>This website would give service providers a chance to connect to people through the digital world and by signing up to our application they can expose themselves to everyone. For the consumers, they would be able to find contacts of the experts right from their bedrooms. Geo-location based display and search helps users find the nearest people and get their contacts. Not interested in our suggestions ? You can select the expert you want to get in touch with as well.
+
+All that said and done, we do have an Easter egg. Its the era of social networking and lazy people (read 'smart geeks') ,for people who want to get the service the fastest way, all you have to do is just ASK for it and Seekert will send you the bird !</P>
+
+		<a href="#" class="button">Read more</a>
+		<a href="#" class="button button-reversed">Comments</a>
+		</article>
+        </section>
+        
+        <aside class="sidebar big-sidebar right-sidebar">
+	
+	
+            <ul>	
+               <li>
+                    <ul class="blocklist">
+                        <li><a class="selected" href="index.html">Home Page</a></li>
+                        <li><a href="#">CONNECT WITH US</a>
+				<ul>
+						<li><a href="personlocation.jsp">YOUR LOCATION</a></li>
+                   				<li><a href="searchexpert.jsp">SEARCH A EXPERT</a></li>
+                   						<li><a href="searchbox.jsp">SEARCH A SEEKER</a></li>
+				</ul>
+			</li>
+                        
+                        <li><a href="searchroute.jsp">GEO-SEARCH</a></li>
+                        
+                    </ul>
+                </li>
+                
+               
+
+		
+               
+               <li>
+                <h4>LOG_IN</h4>
+
+<div class="log" width="1500" id="div3" align="right">
+<form name='myForm'>
+Mail-id: <input type='text' id='age' /> <br />
+Password: <input type='password' id='wpm' />
+
+<input type='button' onclick='ajaxFunction()' value="LOG-IN"  />
+</form>
+</div>
+                </li>
+                 <li>
+			<h4>News</h4>
+			<div id="traffic-feed">
+	<script type="text/javascript" src="http://feedjit.com/serve/?vv=1515&amp;tft=3&amp;dd=0&amp;wid=&amp;pid=0&amp;proid=0&amp;bc=262126&amp;tc=F7F4F7&amp;brd1=CCCCCC&amp;lnk=6AA5C4&amp;hc=878787&amp;hfc=FFFFFF&amp;btn=62BBDE&amp;ww=300&amp;wne=9&amp;srefs=0"></script><noscript><a href="http://feedjit.com/">Live Traffic Stats</a></noscript>
+			
+            </ul>
+		
+        </aside>
+    	<div class="clear"></div>
+    </div>
+</div>
+
+    <footer>
+        
+            
+           
+ 	    
+            
+            <ul class="endfooter">
+            	<li><h4>COMMENT US</h4></li>
+                
+<div class="social-icons">
+
+<a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+
+<a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+
+<a href="#"><i class="fa fa-youtube fa-2x"></i></a>
+
+<a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+
+</div>
+
+</li>
+            </ul>
+            
+            <div class="clear"></div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; YourSite 2014. by VILLAN</p>
+         </div>
+    </footer>
+</body>
+</html>

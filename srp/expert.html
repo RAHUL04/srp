@@ -1,0 +1,168 @@
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SEEKERT-SEEKER AND EXPERT</title>
+
+
+
+
+    </style>
+
+
+        <script src="js/prefixfree.min.js"></script>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="css/form.css" type="text/css" />
+<link rel="stylesheet" href="css/reset.css" type="text/css" />
+<link rel="stylesheet" href="css/styles.css" type="text/css" />
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
+<script type="text/javascript" src="js/superfish.js"></script>
+ <script src="js/prefixfree.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+
+<!--
+deiform, a free CSS web template by ZyPOP (zypopwebtemplates.com/)
+
+Download: http://zypopwebtemplates.com/
+
+License: Creative Commons Attribution
+//-->
+
+<script type="text/javascript" >
+function ajaxFunction(){
+	var ajaxRequest;  // The variable that makes Ajax possible!
+
+	try{
+		// Opera 8.0+, Firefox, Safari
+		ajaxRequest = new XMLHttpRequest();
+	} catch (e){
+		// Internet Explorer Browsers
+		try{
+			ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+		} catch (e) {
+			try{
+				ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+			} catch (e){
+				// Something went wrong
+				alert("Your browser broke!");
+				return false;
+			}
+		}
+	}
+	// Create a function that will receive data sent from the server
+	ajaxRequest.onreadystatechange = function(){
+		if(ajaxRequest.readyState == 4){
+			var ajaxDisplay = document.getElementById('div3');
+				var ajaxDisplay1 = document.getElementById('log1');
+
+			var name=ajaxRequest.responseText;
+			var n="Welcome to SEEKERT";
+			if (name != n)
+					{
+					
+							alert(name);
+						window.location.href = "expert.jsp";
+					}
+					
+
+							ajaxDisplay1.innerHTML = name;
+		}
+	}
+	var age = document.getElementById('age').value;
+	var wpm = document.getElementById('wpm').value;
+
+	var queryString = "?age=" + age + "&wpm=" + wpm ;
+	ajaxRequest.open("GET", "explog.jsp" + queryString, true);
+	ajaxRequest.send(null);
+}
+</script>
+<body>
+<div id="container" class="width">
+
+    <header>
+	<div class="width">
+
+    		<h1><a href="/">SEEKERT</a></h1>
+
+		<nav>
+
+    			<ul class="sf-menu dropdown">
+
+
+        			<li class="selected"><a href="index.html">Home</a></li>
+
+            			<li>
+
+					<a href="#"> CONNECT WITH US</a>
+
+					<ul>
+
+						<li><a href="eregister.html">SIGN UP</a></li>
+                    			
+                			</ul>
+
+            			</li>
+
+
+
+				<li>
+
+					<a href="#">SERVICES</a>
+
+					<ul>
+                				<li><a href="#">YOUR LOCATION</a></li>
+                   				<li><a href="#">SEARCH A SEEKER</a></li>
+                   				<li><a href="#">SEARCH A ROUTE</a></li>
+                			</ul>
+
+            			</li>
+
+				<li><a href="#">Contact</a></li>
+       			</ul>
+
+
+			<div class="clear"></div>
+    		</nav>
+       	</div>
+
+	<div class="clear"></div>
+
+
+    </header>
+
+
+    <div id="intro">
+
+	<div class="width">
+
+		<div class="intro-content">
+  <body>
+<p><strong>PLEASE CONNECT WITH US</STRONG></P>
+    
+     <div class="log" width="1500" id="div3" align="left">
+<form name='myForm'>
+MOBILE-NO: <input type='password' id='age'/>
+Password: <input type='password' id='wpm' /><input type='button' onclick='ajaxFunction()' value="LOG-IN"  /> 
+
+
+
+</form>
+</div>
+
+</html>
